@@ -1,0 +1,111 @@
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  font-family: 'Audiowide', cursive;
+}
+
+body {
+    background: black;
+}
+
+.sidebar-menu {
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 100vh;
+   width: 300px;
+   padding: 30px 20px;
+   backdrop-filter: blur(15px);
+   background: rgba(255,255,255,0.25);
+   z-index: 100;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   font-weight: 300;
+   border-left: 1px solid rgba(255,255,255,0.25);
+  }
+
+  .sidebar-menu h1 {
+     cursor: pointer;
+  }
+
+  .active-page-text-color {
+     color: #AED012; 
+  } 
+
+  .text {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: red;
+    font-size: 40px;
+    z-index: 100;
+  }
+
+  .preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: rgb(20, 20, 20);
+  }
+
+  .preloader img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    animation: rotate linear 2s infinite;
+  }
+
+  .social-container  {
+     position: absolute;
+     left: 50%;
+     bottom: 10px;
+     transform: translate(-50%,-50%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 20px;
+     z-index: 100;
+  }
+
+  .faq-btn {
+     padding: 5px 5px;
+     background: transparent;
+     cursor: pointer;
+     border: 0;
+     font-size: 22px;
+     color: white;
+     border-bottom: 1px solid white;
+  }
+
+  .social-icons {
+     display: flex;
+     align-items: center;
+     gap: 35px;
+  }
+
+  .social-icons i {
+     font-size: 45px;
+     color: white;
+     cursor: pointer;
+  }
+
+@keyframes rotate {
+    0% {
+       rotate: 0deg;
+    }
+
+    100% {
+      rotate: 360deg;
+    }
+}
